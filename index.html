@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Delivery Website</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">FoodExpress</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#cart">Cart</a></li>
+    </ul>
+    <!-- Search Bar with Icon -->
+    <div class="search-box">
+      <input type="text" id="searchBar" placeholder="Search menu items...">
+      <button class="search-icon" onclick="searchMenu()">
+        <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+      </button>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Fast & Delicious Food </h1>
+      <p>Order now and enjoy the fastest delivery in town.</p>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-grid" id="menu-items">
+      <!-- Menu items will be generated dynamically -->
+    </div>
+  </section>
+  
+
+  <!-- Cart Section -->
+  <section id="cart" class="cart">
+    <h2>Your Cart</h2>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-total">
+      <h3>Total: $<span id="total-price">0.00</span></h3>
+      <button onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2023 FoodExpress. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

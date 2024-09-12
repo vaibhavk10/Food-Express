@@ -1,0 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background-image: url('https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/black/Photoroom_black_background_extremely_fine_texture_only_black_co_c5cf0c74-1a27-4387-9b87-e5c28884d2d8.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-content button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Menu Section */
+  .menu {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-item button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Cart Section */
+  .cart {
+    padding: 50px;
+    background-color: #f4f4f4;
+  }
+  
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cart-total {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+  }
+  
