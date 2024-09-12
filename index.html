@@ -6,8 +6,6 @@
   <title>Food Delivery Website</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
 </head>
 <body>
 
@@ -22,11 +20,17 @@
     <!-- Search Bar with Icon -->
     <div class="search-box">
       <input type="text" id="searchBar" placeholder="Search menu items...">
-      <button class="search-icon" onclick="searchMenu()">
-        <i class="fas fa-search"></i> <!-- Font Awesome search icon -->
+      <button class="search-icon">
+        <i class="fas fa-search"></i>
       </button>
     </div>
+    
+    <!-- Signup/Login Button -->
+    <div class="login-button">
+      <button onclick="toggleLoginModal()">Sign Up / Login</button>
+    </div>
   </nav>
+  
 
   <!-- Home Section -->
   <section id="home" class="hero">
@@ -56,11 +60,16 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2023 FoodExpress. All rights reserved.</p>
-  </footer>
 
-  <script src="script.js"></script>
+  
+  ...
+<!-- Footer -->
+<footer class="footer">
+  <p>&copy; 2023 FoodExpress. All rights reserved.</p>
+</footer>
+
+<!-- Script path -->
+<script src="script.js"></script>
+
 </body>
 </html>
