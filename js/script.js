@@ -100,13 +100,10 @@ function displayPopularItems() {
   // Cart logic
 let cart = [];
 
-// Add to cart with quantity control
 function addToCart(index) {
-    // Check if the item already exists in the cart
     const existingItem = cart.find(item => item.name === foodName[index]);
     
     if (existingItem) {
-        // If the item exists, increase its quantity
         existingItem.quantity++;
     } else {
         // If the item doesn't exist, add it with a quantity of 1
@@ -151,25 +148,22 @@ function searchMenu() {
         
         // Check if the item name contains the search query
         if (foodName.includes(query)) {
-            item.style.display = 'block'; // Show matching items
+            item.style.display = 'block'; 
             found = true;
         } else {
-            item.style.display = 'none'; // Hide non-matching items
+            item.style.display = 'none';
         }
     });
 
-    // If no items are found, you can display an alert or show a message
     if (!found) {
         alert('No items found matching your search.');
     } else {
-        // Scroll to the menu section if items are found
         document.getElementById('menu').scrollIntoView({
-            behavior: 'smooth' // Smooth scrolling effect
+            behavior: 'smooth' 
         });
     }
 }
 
-// Allow pressing Enter to trigger the search function
 document.getElementById('searchBar').addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
         searchMenu();
@@ -180,7 +174,7 @@ document.getElementById('searchBar').addEventListener('keypress', function (e) {
 // Function to display cart items
 function displayCart() {
     const cartContainer = document.getElementById('cart-items');
-    cartContainer.innerHTML = ''; // Clear current cart display
+    cartContainer.innerHTML = ''; 
 
     cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
@@ -217,7 +211,7 @@ function updateTotalPrice() {
 
 // Function to remove item from cart
 function removeFromCart(index) {
-    cart.splice(index, 1); // Remove item at the index
+    cart.splice(index, 1); 
     displayCart();
 }
 
@@ -237,7 +231,7 @@ function removeFromCart(index) {
   
   function displayCart() {
     const cartContainer = document.getElementById('cart-items');
-    cartContainer.innerHTML = ''; // Clear current cart display
+    cartContainer.innerHTML = ''; 
 
     cart.forEach((item, index) => {
         const cartItem = document.createElement('div');
