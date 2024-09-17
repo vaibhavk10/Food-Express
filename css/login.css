@@ -17,7 +17,7 @@ html, body {
 }
 
 ::selection {
-  background: #1a75ff;
+  background: #ff8c00;  /* Primary color */
   color: #fff;
 }
 
@@ -41,6 +41,7 @@ html, body {
   font-weight: 600;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #ff8c00;  /* Primary color */
 }
 
 .wrapper .slide-controls {
@@ -69,7 +70,7 @@ html, body {
 }
 
 .slide-controls label.signup {
-  color: #000;
+  color: #333;  /* Secondary color */
 }
 
 .slide-controls .slider-tab {
@@ -79,7 +80,7 @@ html, body {
   left: 0;
   z-index: 0;
   border-radius: 15px;
-  background: -webkit-linear-gradient(left, #003366, #004080, #0059b3, #0073e6);
+  background: -webkit-linear-gradient(left, #ff8c00, #ff6347);  /* Orange gradient */
   transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -98,11 +99,11 @@ input[type="radio"] {
 }
 
 #signup:checked ~ label.login {
-  color: #000;
+  color: #333;  /* Secondary color */
 }
 
 #login:checked ~ label.signup {
-  color: #000;
+  color: #333;  /* Secondary color */
 }
 
 #login:checked ~ label.login {
@@ -144,7 +145,7 @@ input[type="radio"] {
 }
 
 .form-inner form .field input:focus {
-  border-color: #1a75ff;
+  border-color: #ff8c00;  /* Primary color */
 }
 
 .form-inner form .field input::placeholder {
@@ -153,7 +154,7 @@ input[type="radio"] {
 }
 
 form .field input:focus::placeholder {
-  color: #1a75ff;
+  color: #ff8c00;  /* Primary color */
 }
 
 .form-inner form .pass-link {
@@ -167,7 +168,7 @@ form .field input:focus::placeholder {
 
 .form-inner form .pass-link a,
 .form-inner form .signup-link a {
-  color: #1a75ff;
+  color: #ff8c00;  /* Primary color */
   text-decoration: none;
 }
 
@@ -189,7 +190,7 @@ form .btn .btn-layer {
   width: 300%;
   position: absolute;
   left: -100%;
-  background: -webkit-linear-gradient(right, #003366, #004080, #0059b3, #0073e6);
+  background: -webkit-linear-gradient(right, #ff8c00, #ff6347);  /* Orange gradient */
   border-radius: 15px;
   transition: all 0.4s ease;
 }
