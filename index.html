@@ -16,6 +16,8 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#menu">Menu</a></li>
       <li><a href="#cart">Cart</a></li>
+      <li><a href="#popular-items">Popular Items</a></li> 
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
     <!-- Search Bar with Icon -->
     <div class="search-box">
@@ -60,6 +62,38 @@
       <h3>Total: $<span id="total-price">0.00</span></h3>
       <button onclick="checkout()">Proceed to Checkout</button>
     </div>
+  </section>
+
+  <section id="popular-items" class="popular-items">
+    <h2>Popular Items</h2>
+    <div class="popular-grid" id="popular-items-grid">
+      <!-- Items will be generated dynamically via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+      <!-- Replace with your Access Key -->
+      <input type="hidden" name="access_key" value="8aedcbd8-ba1f-405a-89b3-1cc4a3f555fa">
+
+      <div class="field">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="field">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="field">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+
+      <!-- Honeypot Spam Protection -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">Submit Form</button>
+    </form>
   </section>
 
   <!-- Footer -->

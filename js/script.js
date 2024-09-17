@@ -31,6 +31,27 @@ const price = [
     "7$", "2$", "5$", "3$", "2$", "9$", "4$", "1$", "3$", "7$", "5$", "8$", "6$", "3$", "4$", "7$", "2$", "9$", "10$", "6$",
     "15$", "7$", "10$", "6$", "4$", "2$", "5$"
 ];
+
+// Popular Food items and their details
+const popularFoodName = [
+    "Tandoori Chicken", "Caesar Salad",
+    "BBQ Ribs", "Paneer Butter Masala", "Dal Makhni", "Creme Brulee", "Lasagna",
+    "French Fries", "Butter Chicken", "Chicken Wings", "Steak", "Lassi"
+];
+
+// Corresponding image paths from the assets folder (all are .jpg files)
+const popularFoodImages = [
+    "assets/tandoorichicken.jpg", "assets/caesersalad.jpg", 
+    "assets/bbqribs.jpg", "assets/pannerbuttermassala.jpg", "assets/dalmakhni.jpg", "assets/cremebrulee.jpg", "assets/lasgana.jpg",
+    "assets/frenchfries.jpg", "assets/butterchicken.jpg", "assets/chickenwings.jpg", "assets/steak.jpg", "assets/lassi.jpg"
+];
+
+// Prices for each popular food item
+const popularPrice = [
+    "15$", "8$", "9$", "10$", "6$", "7$", "12$",
+    "4$", "8$", "6$", "15$", "2$"
+];
+
   
   // Generate menu items
   const menuContainer = document.getElementById('menu-items');
@@ -51,6 +72,30 @@ const price = [
     `;
     menuContainer.appendChild(menuItem);
   });
+  
+
+  // Function to generate popular items dynamically
+function displayPopularItems() {
+    const popularGrid = document.getElementById('popular-items-grid');
+  
+    popularFoodName.forEach((food, index) => {
+      const popularItem = document.createElement('div');
+      popularItem.classList.add('popular-item');
+      
+      popularItem.innerHTML = `
+        <img src="${popularFoodImages[index]}" alt="${food}">
+        <h3>${food}</h3>
+        <p>${popularPrice[index]}</p>
+      `;
+  
+      popularGrid.appendChild(popularItem);
+    });
+  }
+  
+  // Call the function to display the popular items on page load
+  window.onload = displayPopularItems;
+
+  
   
   // Cart logic
 let cart = [];
@@ -218,3 +263,41 @@ function removeFromCart(index) {
 
     updateTotalPrice();
 }
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Please wait...";
+
+  fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+      },
+      body: json
+  })
+  .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+          result.innerHTML = "Form submitted successfully";
+      } else {
+          console.log(response);
+          result.innerHTML = json.message;
+      }
+  })
+  .catch(error => {
+      console.log(error);
+      result.innerHTML = "Something went wrong!";
+  })
+  .then(function() {
+      form.reset();
+      setTimeout(() => {
+          result.style.display = "none";
+      }, 3000);
+  });
+});
