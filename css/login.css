@@ -12,7 +12,7 @@ html, body {
     height: 100%;
     width: 100%;
     place-items: center;
-    background: url('../assets/loginbanner.png') no-repeat center center/cover;
+    background: url('../assets/webloginscreen.png') no-repeat center center/cover;
     font-family: 'Poppins', sans-serif;
 }
 
