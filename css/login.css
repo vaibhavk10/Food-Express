@@ -218,3 +218,80 @@ form .btn input[type="submit"] {
   color: red;
   font-size: 14px;
 }
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  html, body {
+    display: block;
+    padding: 20px;
+    background-size: cover;
+  }
+
+  .wrapper {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .wrapper .title {
+    font-size: 28px;
+  }
+
+  .slide-controls {
+    margin: 20px 0;
+  }
+
+  .form-inner {
+    display: block;
+    width: 100%;
+  }
+
+  .form-inner form {
+    width: 100%;
+  }
+
+  .form-inner form .field {
+    margin-top: 15px;
+  }
+
+  form .btn {
+    height: 45px;
+  }
+
+  form .btn input[type="submit"] {
+    font-size: 18px;
+  }
+}
+
+/* Hamburger Menu Icon for Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
